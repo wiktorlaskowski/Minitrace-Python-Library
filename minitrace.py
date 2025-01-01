@@ -1,11 +1,9 @@
-# Minitrace: copyright 2024, all rights reserved.
 import sys
 import traceback
 from colorama import Fore, Style, init
 from tkinter import Tk, filedialog
 
 init(autoreset=True)
-
 
 class MiniTrace:
     _trace_length = 5
@@ -51,9 +49,12 @@ class MiniTrace:
     def handle_exception(cls, exc_type, exc_value, tb):
         formatted_trace = cls.format_traceback(exc_type, exc_value, tb)
         print(formatted_trace, file=sys.stderr)
-        response = input("Would you like to save this traceback to a file? (y/n): ").strip().lower()
-        if response == "y":
-            cls.save_to_file(exc_type, exc_value, tb)
+        try:
+            response = input("Would you like to save this traceback to a file? (y/n): ").strip().lower()
+            if response == "y":
+                cls.save_to_file(exc_type, exc_value, tb)
+        except KeyboardInterrupt:
+            print("\nSave operation canceled due to KeyboardInterrupt.")
 
     @classmethod
     def save_to_file(cls, exc_type, exc_value, tb):
@@ -61,7 +62,7 @@ class MiniTrace:
         Tk().withdraw()
         file_path = filedialog.asksaveasfilename(
             defaultextension=".log",
-            filetypes=[("Log files", "*.log"), ("Text files", "*.txt"), ("All files", "*.*")]
+            filetypes=[("Log files", "*.log"), ("Text files", "*.txt"), ("No extension iles", ".")]
         )
         if file_path:
             with open(file_path, "w") as file:
