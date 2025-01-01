@@ -1,3 +1,8 @@
+# WARNING
+# MINITRACE WAS REBRANDED AND IS NOW TRACE+
+
+
+# LEGACY: MINITRACE:
 ![minitrace_light](https://github.com/user-attachments/assets/8033396d-e759-4df6-ba4c-d14a493b4be5)
 # Minitrace-Python-Library
 Shorten those verbose Python tracebacks to something more compact, comes with saving!
