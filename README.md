@@ -1,10 +1,5 @@
-# WARNING
-# MINITRACE WAS REBRANDED AND IS NOW TRACE+
-
-
-# LEGACY: MINITRACE:
 ![minitrace_light](https://github.com/user-attachments/assets/8033396d-e759-4df6-ba4c-d14a493b4be5)
-# Minitrace-Python-Library
+# Minitrace Python Library
 Shorten those verbose Python tracebacks to something more compact, comes with saving!
 
 Ever seen thove __long__ tracebacks? Welp, this is for you!
@@ -26,3 +21,5 @@ Use `MiniTrace.settracelengthto()` to set the length
 ```Python
 MiniTrace.settracelengthto(10)
 ```
+# NOTES:
+Pip does not support minitrace, you will need to download the file from raw code to activate it.
