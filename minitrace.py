@@ -42,7 +42,7 @@ class MiniTrace:
         return f"Traceback: Most recent calls\n" + "\n".join(formatted_lines)
 
     @classmethod
-    def hook(cls):
+    def init(cls):
         sys.excepthook = cls.handle_exception
 
     @classmethod
