@@ -9,11 +9,12 @@ There are requirements:
 - __Tkinter__ for the file dialouge, probably installed but best to check.
 # SETUP
 1. First import the library. ___DO NOT USE `import minitrace` USE `from minitrace import MiniTrace`___
-2. Hook to activate the library using `MiniTrace.hook()`
+2. Initialize the library using the init function
+   `MiniTrace.init()`
 # `Full script`:
    ```Python
    from minitrace import MiniTrace
-   MiniTrace.hook()
+   MiniTrace.init()
    ```
 # HOW TO CUSTOMIZE
 Use `MiniTrace.settracelengthto()` to set the length
