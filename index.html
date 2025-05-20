@@ -1,10 +1,203 @@
-<!doctype html>
-<html>
-  <head>
-    <title>The Minitrace landing page!</title>
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minitrace Python Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    header {
+      background: #1e272e;
+      color: #fff;
+      padding: 3em 1em;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    header p {
+      font-size: 1.3em;
+      margin-top: 0.5em;
+    }
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2em 1em;
+    }
+    section {
+      margin-bottom: 3em;
+    }
+    h2 {
+      font-size: 1.8em;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3em;
+      margin-bottom: 1em;
+    }
+    ul {
+      margin-left: 1.5em;
+    }
+    .code-container {
+      position: relative;
+      margin: 1em 0;
+    }
+    pre {
+      background-color: #eaeaea;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      font-family: monospace;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1em;
+      color: #444;
+    }
+    .copy-btn:hover {
+      color: #000;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 4em;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 0.8em 1.5em;
+      background-color: #2980b9;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2em;
+    }
+    .cta a:hover {
+      background-color: #1f6390;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      padding: 2em 1em;
+      margin-top: 3em;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
     <h1>Minitrace</h1>
-    <small>The traceback library</small>
-  </body>
+    <p>Minimal tracebacks. Maximum clarity.</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>About the Project</h2>
+      <p>
+        Minitrace is a focused debugging utility that compresses and simplifies Python tracebacks 
+        so that developers can immediately spot the root cause of runtime errors. 
+      </p>
+      <p>
+        With built-in highlighting and optional GUI prompts, it is especially handy for developers 
+        working across environments, from terminal sessions to small GUI-based applications.
+      </p>
+    </section>
+
+    <section class="features">
+      <h2>Features</h2>
+      <ul>
+        <li>Shortened traceback output for faster debugging</li>
+        <li>Colorized error lines using <strong>Colorama</strong></li>
+        <li>Optional file selection dialog via <strong>Tkinter</strong></li>
+        <li>Customizable traceback depth</li>
+        <li>File-saving support for preserving crash info</li>
+        <li>No external services or internet access needed</li>
+        <li>Fully open-source and lightweight (pure Python)</li>
+      </ul>
+    </section>
+
+    <section class="installation">
+      <h2>Installation</h2>
+      <p><strong>Option 1: Clone the GitHub repository</strong></p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+        <pre><code>git clone https://github.com/wiktorlaskowski/Minitrace-Python-Library.git</code></pre>
+      </div>
+      <p><strong>Option 2: Download the Python file directly</strong></p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+        <pre><code>Download minitrace.py from the repository and place it in your project folder.</code></pre>
+      </div>
+    </section>
+
+    <section class="usage">
+      <h2>Usage Example</h2>
+      <p>Import and initialize the library:</p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+        <pre><code>from minitrace import MiniTrace
+
+MiniTrace.init()
+# Your code here...</code></pre>
+      </div>
+    </section>
+
+    <section class="customization">
+      <h2>Customization</h2>
+      <p>Adjust the length of visible traceback:</p>
+      <div class="code-container">
+        <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+        <pre><code>MiniTrace.settracelengthto(10)</code></pre>
+      </div>
+    </section>
+
+    <section class="philosophy">
+      <h2>Project Philosophy</h2>
+      <p>
+        Minitrace helps reduce noise. Instead of adding complexity, it strips Python's traceback output down 
+        to what’s essential. Built for speed and clarity, Minitrace stays out of the way until it’s needed.
+      </p>
+    </section>
+
+    <section class="support">
+      <h2>Support and Contributions</h2>
+      <p>
+        Have a suggestion, bug report, or idea? Open an issue or submit a pull request on GitHub.
+      </p>
+    </section>
+
+    <div class="cta">
+      <a href="https://github.com/wiktorlaskowski/Minitrace-Python-Library/" target="_blank">
+        Explore the Code on GitHub
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Minitrace. Created by Wiktor Laskowski. MIT Licensed.
+  </footer>
+
+  <script>
+    function copyCode(button) {
+      const code = button.nextElementSibling.innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        const icon = button.querySelector("i");
+        icon.classList.replace("fa-copy", "fa-check");
+        setTimeout(() => icon.classList.replace("fa-check", "fa-copy"), 1500);
+      });
+    }
+  </script>
+</body>
 </html>
