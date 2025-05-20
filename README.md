@@ -7,6 +7,8 @@ There are requirements:
 # REQUIREMENTS
 - __Colorama__ colorcodes the line with the error.
 - __Tkinter__ for the file dialouge, probably installed but best to check.
+# MAIN WEBSITE
+Go to the website at https://wiktorlaskowski.github.io/Minitrace-Python-Library/
 # SETUP
 1. First import the library. ___DO NOT USE `import minitrace` USE `from minitrace import MiniTrace`___
 2. Initialize the library using the init function
