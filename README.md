@@ -2,8 +2,7 @@
 # Minitrace Python Library
 Shorten those verbose Python tracebacks to something more compact, comes with saving!
 
-Ever seen thove __long__ tracebacks? Welp, this is for you!
-There are requirements:
+Ever seen those __long__ tracebacks? Welp, this is for you!
 # REQUIREMENTS
 - __Colorama__ colorcodes the line with the error.
 - __Tkinter__ for the file dialogue, probably installed but best to check.
