@@ -6,7 +6,7 @@ Ever seen thove __long__ tracebacks? Welp, this is for you!
 There are requirements:
 # REQUIREMENTS
 - __Colorama__ colorcodes the line with the error.
-- __Tkinter__ for the file dialouge, probably installed but best to check.
+- __Tkinter__ for the file dialogue, probably installed but best to check.
 # MAIN WEBSITE
 Go to the website at https://wiktorlaskowski.github.io/Minitrace-Python-Library/
 # SETUP
