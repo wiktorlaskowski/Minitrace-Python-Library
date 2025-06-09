@@ -39,7 +39,10 @@ class MiniTrace:
             for line in reversed(trace_lines)
         ]
         expectation = f"{exc_type.__name__}: {exc_value}"
-        return f"Traceback: Most recent calls\n" + "\n".join(formatted_lines)
+        formatted_lines.append(expectation)
+        return (
+            "Traceback: Most recent calls\n" + "\n".join(formatted_lines)
+        )
 
     @classmethod
     def init(cls):
@@ -62,7 +65,11 @@ class MiniTrace:
         Tk().withdraw()
         file_path = filedialog.asksaveasfilename(
             defaultextension=".log",
-            filetypes=[("Log files", "*.log"), ("Text files", "*.txt"), ("No extension iles", ".")]
+            filetypes=[
+                ("Log files", "*.log"),
+                ("Text files", "*.txt"),
+                ("All files", "*.*"),
+            ]
         )
         if file_path:
             with open(file_path, "w") as file:
