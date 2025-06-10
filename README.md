@@ -23,5 +23,12 @@ Use `MiniTrace.settracelengthto()` to set the length
 ```Python
 MiniTrace.settracelengthto(10)
 ```
+Use `MiniTrace.set_show_full_path(True)` to include file paths in the output.
+
+Enable automatic saving of tracebacks:
+```Python
+MiniTrace.enable_auto_save("trace.log")
+```
+Disable with `MiniTrace.disable_auto_save()` when you are done.
 # NOTES:
 Pip does not support minitrace, you will need to download the file from raw code to activate it.
