@@ -23,5 +23,16 @@ Use `MiniTrace.settracelengthto()` to set the length
 ```Python
 MiniTrace.settracelengthto(10)
 ```
+### Show full file paths
+Call `MiniTrace.set_show_full_path(True)` to show absolute paths when printing a
+traceback. Reset with `MiniTrace.set_show_full_path(False)` if you prefer just
+the filenames.
+
+### Automatic saving
+Enable writing every traceback to a log file:
+```Python
+MiniTrace.enable_auto_save("trace.log")
+```
+Stop automatic saving with `MiniTrace.disable_auto_save()` when you are done.
 # NOTES:
 Pip does not support minitrace, you will need to download the file from raw code to activate it.
